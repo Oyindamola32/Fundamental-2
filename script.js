@@ -298,7 +298,7 @@ const jonas = {
   job: 'teacher',
   friends: ['Michael', 'Peter', 'Steven']
 };
-*/
+
 
 ///////////////////////////////////////
 // Dot vs. Bracket Notation
@@ -335,3 +335,41 @@ console.log(jonas);
 // Challenge
 // "Jonas has 3 friends, and his best friend is called Michael"
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+*/
+
+
+///////////////////////////////////////
+// Object Methods
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  birthYeah: 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+  hasDriversLicense: true,
+
+  // calcAge: function (birthYeah) {
+  //   return 2037 - birthYeah;
+  // }
+
+  // calcAge: function () {
+  //   // console.log(this);
+  //   return 2037 - this.birthYeah;
+  // }
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYeah;
+    return this.age;
+  },
+
+  
+};
+
+console.log(jonas.calcAge());
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+
+
